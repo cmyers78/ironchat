@@ -86,6 +86,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             (user, error) in
             
+            // do catch needed??
+            
             if error != nil {
                 self.alerts("Alert", message: "User not found. Please register")
                 print(error?.localizedDescription)
@@ -118,7 +120,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         alertController.addAction(cancelAction)
         
-        self.presentViewController(alertController, animated: true, completion:  nil)
+        dispatch_async(dispatch_get_main_queue(), {
+            self.presentViewController(alertController, animated: true, completion:  nil)
+                    
+                    })
+        
 
     }
 
