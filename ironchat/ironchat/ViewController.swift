@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if let user = FIRAuth.auth()?.currentUser {
             // User is signed in.
+            self.performSegueWithIdentifier("welcomeSegue", sender: nil)
             print("I am signed in as user\(user.email)")
             
         } else {
@@ -29,7 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         self.loginEmailTextBox.delegate = self
-        
+        self.loginPWTextBox.delegate = self
     }
     
     @IBAction func signOutTapped(sender: UIBarButtonItem) {
@@ -92,6 +93,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if error != nil {
                 self.alerts("Alert", message: "User not found. Please register")
                 print(error?.localizedDescription)
+                return
             }
             
             if let user = user {
