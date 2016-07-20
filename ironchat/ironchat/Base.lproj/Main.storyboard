@@ -57,6 +57,7 @@
                                 <state key="normal" title="LOGIN"/>
                                 <connections>
                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nCR-sN-X0L"/>
+                                    <segue destination="k9A-Mu-KfX" kind="show" identifier="welcomeSegue" id="u0d-Qn-Bj9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mn-vT-lKp">
@@ -135,7 +136,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="-442"/>
+            <point key="canvasLocation" x="881" y="-430"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CLZ-wc-gH8">
+            <objects>
+                <viewController id="k9A-Mu-KfX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ae-xy-BOQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ujn-Qx-fT8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rTv-59-6zl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SG3-jT-wS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603" y="-430"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="qVc-0a-3wq">

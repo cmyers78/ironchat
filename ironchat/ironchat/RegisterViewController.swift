@@ -47,6 +47,7 @@ class RegisterViewController: UIViewController {
             
             if error != nil {
                 print(error?.localizedDescription)
+                self.alerts("Alert!", message: "Please enter a valid email address and password")
                 
             }
             
@@ -56,4 +57,19 @@ class RegisterViewController: UIViewController {
             }
         }
     }
+    
+    func alerts(title : String, message : String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        
+        let cancelAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(cancelAction)
+        
+        self.presentViewController(alertController, animated: true, completion:  nil)
+        
+    }
+
 }

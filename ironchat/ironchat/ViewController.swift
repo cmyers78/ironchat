@@ -42,6 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if let pw = self.loginPWTextBox.text {
                 self.signinUser(signin, password: pw)
             }
+            
         }
     }
     
@@ -63,6 +64,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             if error != nil {
                 print(error?.localizedDescription)
+                self.alerts("Alert!", message: "Please enter a valid email address and password")
                 
             }
             
@@ -85,11 +87,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
             (user, error) in
             
             if error != nil {
+                self.alerts("Alert", message: "User not found. Please register")
                 print(error?.localizedDescription)
             }
             
             if let user = user {
                 print("\(user.email) is signed in!")
+                self.performSegueWithIdentifier("welcomeSegue", sender: nil)
             }
         }
         
@@ -102,6 +106,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return true
+    }
+    
+    func alerts(title : String, message : String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        
+        let cancelAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(cancelAction)
+        
+        self.presentViewController(alertController, animated: true, completion:  nil)
+
     }
 
 }
