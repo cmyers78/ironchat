@@ -138,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="881" y="-430"/>
         </scene>
-        <!--View Controller-->
+        <!--Success View Controller-->
         <scene sceneID="CLZ-wc-gH8">
             <objects>
-                <viewController id="k9A-Mu-KfX" sceneMemberID="viewController">
+                <viewController id="k9A-Mu-KfX" customClass="SuccessViewController" customModule="ironchat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8ae-xy-BOQ"/>
                         <viewControllerLayoutGuide type="bottom" id="ujn-Qx-fT8"/>

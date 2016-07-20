@@ -15,6 +15,7 @@
 		C678BCA41D3E95A400B27DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C678BCA21D3E95A400B27DE7 /* Main.storyboard */; };
 		C678BCA61D3E95A400B27DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C678BCA51D3E95A400B27DE7 /* Assets.xcassets */; };
 		C678BCA91D3E95A400B27DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C678BCA71D3E95A400B27DE7 /* LaunchScreen.storyboard */; };
+		C6E5A5681D3FC999002467E2 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E5A5671D3FC999002467E2 /* SuccessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C678BCA51D3E95A400B27DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C678BCA81D3E95A400B27DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C678BCAA1D3E95A400B27DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6E5A5671D3FC999002467E2 /* SuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		D850BCCA460AF99DFD07A31C /* Pods-ironchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ironchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ironchat/Pods-ironchat.debug.xcconfig"; sourceTree = "<group>"; };
 		EFE2AF6B36E0E6090C015132 /* Pods-ironchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ironchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-ironchat/Pods-ironchat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 				C678BC9E1D3E95A400B27DE7 /* AppDelegate.swift */,
 				C66E3E521D3E9C4F00D7C4DF /* GoogleService-Info.plist */,
 				C678BCA01D3E95A400B27DE7 /* ViewController.swift */,
+				C6E5A5671D3FC999002467E2 /* SuccessViewController.swift */,
 				C678BCA21D3E95A400B27DE7 /* Main.storyboard */,
 				C601689F1D3ECDDE00BD4426 /* RegisterViewController.swift */,
 				C678BCA51D3E95A400B27DE7 /* Assets.xcassets */,
@@ -219,6 +222,7 @@
 			files = (
 				C60168A01D3ECDDE00BD4426 /* RegisterViewController.swift in Sources */,
 				C678BCA11D3E95A400B27DE7 /* ViewController.swift in Sources */,
+				C6E5A5681D3FC999002467E2 /* SuccessViewController.swift in Sources */,
 				C678BC9F1D3E95A400B27DE7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,13 +22,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if let user = FIRAuth.auth()?.currentUser {
             // User is signed in.
             print("I am signed in as user\(user.email)")
-            //self.signoutUser()
+            
         } else {
             print("I am not signed in")
             
         }
-        
-        //self.createUser("libby.myers@gmail.com", password: "hannahlily2@")
         
     }
     
@@ -41,6 +39,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if let signin = self.loginEmailTextBox.text {
             if let pw = self.loginPWTextBox.text {
                 self.signinUser(signin, password: pw)
+                
             }
             
         }
@@ -56,25 +55,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     }
 
-    func createUser(email : String, password: String) {
-        
-        FIRAuth.auth()?.createUserWithEmail(email, password: password) {
-            
-            (user, error) in
-            
-            if error != nil {
-                print(error?.localizedDescription)
-                self.alerts("Alert!", message: "Please enter a valid email address and password")
-                
-            }
-            
-            if let user = user {
-                print(user.uid)
-                print("Successfuly created user \(email)")
-            }
-            // ...
-        }
-    }
+//    func createUser(email : String, password: String) {
+//        
+//        FIRAuth.auth()?.createUserWithEmail(email, password: password) {
+//            
+//            (user, error) in
+//            
+//            if error != nil {
+//                print(error?.localizedDescription)
+//                self.alerts("Alert!", message: "Please enter a valid email address and password")
+//                
+//            }
+//            
+//            if let user = user {
+//                print(user.uid)
+//                print("Successfuly created user \(email)")
+//            }
+//            // ...
+//        }
+//    }
 
     func signoutUser() {
         try! FIRAuth.auth()!.signOut()
@@ -95,7 +94,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             if let user = user {
                 print("\(user.email) is signed in!")
-                self.performSegueWithIdentifier("welcomeSegue", sender: nil)
+                self.performSegueWithIdentifier("welcomeSegue", sender: self)
             }
         }
         
