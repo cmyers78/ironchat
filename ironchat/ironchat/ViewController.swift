@@ -28,6 +28,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
         }
         
+        self.loginEmailTextBox.delegate = self
+        
     }
     
     @IBAction func signOutTapped(sender: UIBarButtonItem) {
